@@ -1,0 +1,19 @@
+{
+  "name": "cules-coding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/formbody": "^7.4.0",
+    "fastify": "^4.24.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
