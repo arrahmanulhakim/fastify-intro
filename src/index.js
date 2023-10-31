@@ -12,7 +12,7 @@ fastify.setValidatorCompiler(({ schema, method, url, httpPart }) => {
 
 const app = fastify({ logger: true })
 
-app.register(require('@fastify/formbody')) // <== fastify-formbody is deprecated
+app.register(require('@fastify/formbody')) // <== fastify-formbody is deprecatedd
 
 app.register(require('./routers'), {
     prefix: '/api',
