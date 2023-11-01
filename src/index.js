@@ -2,15 +2,16 @@ const fastify = require('fastify')
 
 const Ajv = require('ajv')
 
+const app = fastify({ logger: true })
+
 const ajv = new Ajv({
-    //   removeAdditional: 'all',
-    coerceTypes: 'array',
+    removeAdditional: 'all',
+    coerceTypes: false,
 })
-fastify.setValidatorCompiler(({ schema, method, url, httpPart }) => {
+app.setValidatorCompiler(({ schema, method, url, httpPart }) => {
     return ajv.compile(schema)
 })
 
-const app = fastify({ logger: true })
 
 app.register(require('@fastify/formbody')) // <== fastify-formbody is deprecatedd
 
